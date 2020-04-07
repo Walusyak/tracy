@@ -32,6 +32,11 @@ namespace Tracy;
 <?php } endforeach ?>
 
 <?php if ($type === 'main'): ?>
+	<?php if ($showMinimizer): ?>
+		<li class="tracy-minimizer tracy-minimizer-minimize"><a href="#" rel="minimize" title="minimize debug bar">&minus;</a></li>
+		<li class="tracy-minimizer tracy-minimizer-maximize tracy-minimizer-hide"><a href="#" rel="maximize" title="maximize debug bar">&plus;</a></li>
+	<?php endif ?>
 	<li><a href="#" rel="close" title="close debug bar">&times;</a></li>
+
 <?php endif ?>
 </ul>

@@ -119,6 +119,9 @@ class Debugger
 	/** @var array|null */
 	private static $cpuUsage;
 
+	/** @var bool whether to display plus/minus icons */
+	public static $showMinimizer = false;
+
 	/********************* services ****************d*g**/
 
 	/** @var BlueScreen */

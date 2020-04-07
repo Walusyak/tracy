@@ -232,6 +232,10 @@ body#tracy-debug { /* in popup window */
 	margin: 0 .2em 0 .5em;
 }
 
+#tracy-debug .tracy-minimizer-hide {
+	display: none;
+}
+
 
 /* panels */
 #tracy-debug .tracy-panel {
