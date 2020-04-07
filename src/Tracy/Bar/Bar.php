@@ -119,6 +119,7 @@ class Bar
 	private function renderHtml(string $type, string $suffix = ''): array
 	{
 		$panels = $this->renderPanels($suffix);
+		$showMinimizer = Debugger::$showMinimizer;
 
 		ob_start(function () {});
 		require __DIR__ . '/assets/bar.phtml';
