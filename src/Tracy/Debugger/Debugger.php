@@ -119,8 +119,11 @@ class Debugger
 	/** @var array|null */
 	private static $cpuUsage;
 
-	/** @var bool whether to display plus/minus icons */
-	public static $showMinimizer = false;
+	/** @var array */
+	public static $toggleBarPanels = [
+		'show' => false, // bool, whether to display plus/minus icons
+		'exclude' => [], // string[], which bar panels should be ignored while toggle
+	];
 
 	/********************* services ****************d*g**/
 
