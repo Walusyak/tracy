@@ -52,7 +52,7 @@ class TracyExtension extends Nette\DI\CompilerExtension
 			'blueScreen' => Expect::listOf('callable'),
 			'editorMapping' => Expect::arrayOf('string')->dynamic()->default(null),
 			'netteMailer' => Expect::bool(true),
-			'toggleBarPanels' => Expect::arrayOf('string')->dynamic()->default(null),
+			'toggleBarPanels' => Expect::array()->dynamic(),
 		]);
 	}
 

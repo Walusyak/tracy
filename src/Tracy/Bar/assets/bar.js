@@ -5,7 +5,6 @@
 'use strict';
 
 (function(){
-	console.log('tracy-fork');
 	let nonce, contentId, ajaxCounter = 1;
 	let baseUrl = location.href.split('#')[0];
 	baseUrl += (baseUrl.indexOf('?') < 0 ? '?' : '&');
