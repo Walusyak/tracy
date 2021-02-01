@@ -36,9 +36,9 @@ namespace Tracy;
 		<li class="tracy-bar-toggler">
 			<a
 					href="#"
-					rel="toggle"
 					data-title-maximize="maximize debug bar"
 					data-title-minimize="minimize debug bar"
+					data-tracy-action="toggle"
 					data-excluded-panels="<?= htmlspecialchars(json_encode(Debugger::$toggleBarPanels['exclude'] ?? [])) ?>"
 			></a>
 		</li>

@@ -257,7 +257,7 @@
 
 
 		initTabs(elem) {
-			if (this.elem.querySelectorAll('.tracy-row li a[rel=toggle]').length) {
+			if (this.elem.querySelectorAll('.tracy-row li a[data-tracy-action="toggle"]').length) {
 				this.restoreToggleState();
 			}
 			elem.querySelectorAll('a').forEach((link) => {
@@ -265,7 +265,7 @@
 					if (link.dataset.tracyAction === 'close') {
 						this.close();
 
-					} else if (link.rel === 'toggle') {
+					} else if (link.dataset.tracyAction === 'toggle') {
 						toggleBar(elem, !getToggleState(elem), getExcludedPanels(this.elem));
 						this.saveToggleState();
 						this.restorePosition();
@@ -692,7 +692,7 @@
 
 
 	function getExcludedPanels(elem) {
-		let dataset = JSON.parse(elem.querySelectorAll('.tracy-row li a[rel=toggle]')[0].dataset.excludedPanels), i;
+		let dataset = JSON.parse(elem.querySelectorAll('.tracy-row li a[data-tracy-action="toggle"]')[0].dataset.excludedPanels), i;
 		for (i = 0; i < dataset.length; i++) {
 			dataset[i] = 'tracy-debug-panel-' + dataset[i];
 		}
@@ -719,7 +719,7 @@
 							continue;
 						}
 
-						if (a[0].rel === 'toggle') {
+						if (a[0].dataset.tracyAction === 'toggle') {
 							a[0].title = state ? a[0].dataset.titleMinimize : a[0].dataset.titleMaximize;
 							a[0].innerText = state ? '\u2212' : '\u002B';
 
